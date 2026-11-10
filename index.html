@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="km" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="C++ Practice Hub — វេទិកាអនុវត្តលំហាត់ C++ សម្រាប់និស្សិត ជាមួយចម្លើយលាក់ និងការតាមដានការរៀន។">
+  <meta name="color-scheme" content="dark light">
+  <title>C++ Practice Hub — អនុវត្ត C++ ឱ្យកាន់តែខ្លាំង</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanuman:wght@400;500;700;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/theme-init.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">រំលងទៅខ្លឹមសារសំខាន់</a>
+
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/dashboard" aria-label="C++ Practice Hub — ទំព័រដើម">
+        <span class="brand-mark" aria-hidden="true">
+          <i data-lucide="braces"></i>
+        </span>
+        <span class="brand-copy">
+          <strong>C++ Practice Hub</strong>
+          <span>អនុវត្ត • គិត • ដោះស្រាយ</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="ម៉ឺនុយសំខាន់">
+        <a href="#/dashboard" data-nav="dashboard">
+          <i data-lucide="layout-dashboard"></i>
+          <span>ផ្ទាំងគ្រប់គ្រង</span>
+        </a>
+        <a href="#/exercises" data-nav="exercises">
+          <i data-lucide="book-open"></i>
+          <span>លំហាត់</span>
+        </a>
+        <a href="#/challenges" data-nav="challenges">
+          <i data-lucide="zap"></i>
+          <span>Challenge Zone</span>
+        </a>
+        <a href="#/bookmarks" data-nav="bookmarks">
+          <i data-lucide="bookmark"></i>
+          <span>រក្សាទុក</span>
+        </a>
+        <a href="#/playground" data-nav="playground">
+          <i data-lucide="code-2"></i>
+          <span>Playground</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-button header-search-button" type="button" data-action="global-search" aria-label="ស្វែងរកលំហាត់" title="ស្វែងរក">
+          <i data-lucide="search"></i>
+        </button>
+        <button class="theme-toggle" type="button" data-action="toggle-theme" aria-label="ប្តូររចនាពណ៌" title="ប្តូរ theme">
+          <span class="theme-toggle-track">
+            <span class="theme-toggle-thumb">
+              <i data-lucide="moon" class="icon-dark"></i>
+              <i data-lucide="sun" class="icon-light"></i>
+            </span>
+          </span>
+        </button>
+        <button class="icon-button mobile-menu-button" type="button" data-action="toggle-menu" aria-label="បើកម៉ឺនុយ" aria-expanded="false" aria-controls="main-nav">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="app-main" tabindex="-1">
+    <div id="app-view" class="view-root" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark small" aria-hidden="true"><i data-lucide="braces"></i></span>
+        <div>
+          <strong>C++ Practice Hub</strong>
+          <p>វេទិកាអនុវត្ត C++ សម្រាប់ការគិតដោយឯករាជ្យ និងការដោះស្រាយបញ្ហា។</p>
+        </div>
+      </div>
+      <div class="footer-meta">
+        <p>រចនា និងអភិវឌ្ឍដោយ <strong>Set Vanneng</strong></p>
+        <p>© <span data-current-year></span> C++ Practice Hub. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modal-backdrop" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-message" tabindex="-1">
+      <div class="modal-icon" id="modal-icon" aria-hidden="true"><i data-lucide="help-circle"></i></div>
+      <h2 id="modal-title">តើអ្នកប្រាកដទេ?</h2>
+      <p id="modal-message"></p>
+      <div class="modal-actions">
+        <button class="button button-ghost" type="button" data-modal-cancel>បោះបង់</button>
+        <button class="button button-primary" type="button" data-modal-confirm>យល់ព្រម</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+
+  <script src="js/data/topics.js"></script>
+  <script src="js/data/01-intro.js"></script>
+  <script src="js/data/02-output.js"></script>
+  <script src="js/data/03-variables.js"></script>
+  <script src="js/data/04-input.js"></script>
+  <script src="js/data/05-data-types.js"></script>
+  <script src="js/data/06-type-conversion.js"></script>
+  <script src="js/data/07-operators.js"></script>
+  <script src="js/data/08-conditionals.js"></script>
+  <script src="js/data/09-loops.js"></script>
+  <script src="js/data/10-nested-loops.js"></script>
+  <script src="js/data/11-arrays.js"></script>
+  <script src="js/data/12-strings.js"></script>
+  <script src="js/data/13-functions.js"></script>
+  <script src="js/data/14-function-overloading.js"></script>
+  <script src="js/data/15-recursion.js"></script>
+  <script src="js/data/16-pointers.js"></script>
+  <script src="js/data/17-references.js"></script>
+  <script src="js/data/18-structs.js"></script>
+  <script src="js/data/19-enums.js"></script>
+  <script src="js/data/20-dynamic-memory.js"></script>
+  <script src="js/data/21-oop.js"></script>
+  <script src="js/data/22-classes-objects.js"></script>
+  <script src="js/data/23-constructors.js"></script>
+  <script src="js/data/24-encapsulation.js"></script>
+  <script src="js/data/25-inheritance.js"></script>
+  <script src="js/data/26-polymorphism.js"></script>
+  <script src="js/data/27-abstraction.js"></script>
+
+  <script src="js/utils.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/playground.js"></script>
+  <script src="js/compiler.js"></script>
+  <script src="js/app-core.js"></script>
+  <script src="js/views.js"></script>
+  <script src="js/views-detail.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
