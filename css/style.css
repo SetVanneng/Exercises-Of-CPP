@@ -161,32 +161,22 @@ samp {
 }
 
 .brand-mark {
-  display: grid;
-  place-items: center;
+  display: block;
   width: 38px;
   height: 38px;
   flex: 0 0 38px;
-  border: 1px solid color-mix(in srgb, var(--accent) 35%, var(--border));
-  border-radius: 11px;
-  background: var(--accent-soft);
-  color: var(--accent);
 }
 
-.brand-mark svg {
-  width: 20px;
-  height: 20px;
+.brand-mark .brand-logo {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .brand-mark.small {
   width: 32px;
   height: 32px;
   flex-basis: 32px;
-  border-radius: 9px;
-}
-
-.brand-mark.small svg {
-  width: 17px;
-  height: 17px;
 }
 
 .brand-copy {
